@@ -17,3 +17,12 @@ puts array
 puts doublev1(array) # won't mutate existing array
 
 puts doublev2(array) # mutate existing array
+
+
+class Array
+    def double
+        self.map{ |num| num*2 } 
+    end
+end
+
+puts [1,2,3].double().to_s
