@@ -1,18 +1,20 @@
 chars = ['a','a','b']
-uniqueChars = {}
+
 def printFrequencyOfChars(input)
-    puts "hellp"
+  uniqueChars = {} 
+  if input.empty?
+    return uniqueChars
+  end
+  input.each do |charVal|
+    if uniqueChars.key?(charVal)
+      uniqueChars[charVal] += 1
+    else
+      uniqueChars[charVal] = 1
+    end
+  end
+  puts uniqueChars
 end
+
 printFrequencyOfChars(chars)
 
-a = [1, 2, 3]
-
-# Example of a method definition that mutates its argument permanently
-def mutate(array)
-  array.pop
-end
-
-puts "Before mutate method: #{a}"
-mutate(a)
-puts "After mutate method: #{a}"
 
